@@ -7,4 +7,10 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  # verb "/path", to: "controller#action"
+  # behind the scene: get('/ask', { to: "questions#ask" })
+  # make default with root: get '/ask', to: "questions#ask"
+  root to: "questions#ask"
+  get '/answer', to:"questions#answer"
 end
